@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Cristiano Franca">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Um contador de agua diario">
+    <title>Contador de agua bebida</title>
+    <link rel="stylesheet" href="stile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+        <div class="centerbox">
+            <div class="topbox">
+                <img class="boxleft" src="asstes/sticker2 1.png" alt="face">
+                <div class="boxright">
+                <p class="text1">Boa tarde,</p>
+                <p class="text2">Cris</p>
+                </div>
+            </div>
+            <div class="buttonbox">
+                <div class="card">
+                    <div class="porcentagem">
+                        <output id="saida1">0</output>
+                        <label for="range1">%</label>
+                    </output>
+                    </div>
+                    <div class="cardcenter">
+                    <img class="cup" src="asstes/Emoji1.svg" alt="cup water">
+                    <div class="buttontext">
+                     <p class="text4">Beber água</p>
+                     <p class="text5">Meta: 3L</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="rightbox">
+                    <div class="barra1">
+                        <div class="barra1top">
+                        <label class="label1" for="vol">Meta diária</label>
+                        <div class="ml">
+                        <output form="numform" id="x" name="ml" for="a">0</output>
+                        <p class="text6">ml</p>  
+                        </div>
+                        </div>
+                        <div class="barra1button">
+                            <form id="numform" oninput="x.value=parseInt(a.value)">
+                            <input type="range" id="a" name="a" value="0" min="0" max="5000">
+                            </form>    
+                        </div>
+                        
+                             
+                    </div>         
+                            
+                    <div class="barra2">
+                        <div class="barra2top">
+                            <div class="text7">
+                            <p >Quantidade por timer</p>
+                            </div>
+                            <div class="contadores">
+                                <output id="saida2">0</output>
+                                <label class="porcentagemSimbol" for="range1">ml</label>
+                            </div>
+                        </div>   
+                            <div class="slider2">
+                            <div class="input2">
+                            
+                                <input type="range" id="range1" min="0" max="5000" value="0" oninput="atualizarSaidas(this.value)">
+                            
+                            </div>
+                            </div>
+                        
+                    </div>      
+                          
+                    <div class="timerbox">
+                        <div class="hora">
+
+                            
+                            <div class="horabox1">
+                             <h1 id="timerhora">
+                                00
+                             </h1>
+                            </div>
+                            <div class="horabox2">
+                               <p>h</p> 
+                            </div>
+                            
+                        </div>
+                            <div class="simbol">
+                                <p>:</p>
+                            </div>
+
+                         <div class="minute">
+                            <div class="minutebox1">
+                              <h2 id="timerminute">
+                                00
+                              </h2>
+                            </div>
+                            <div class="minutebox2">
+                                <p>m</p>
+                            </div>
+
+                         </div>   
+                    </div>       
+
+                    <div id="button">
+                        <button id="startButton" onclick="comecarTime" type="button" name="start">
+                            Começar
+                        <img class="img" src="asstes/Icon.svg" alt="" >
+                        <button id="stopButton" style="display: none;">Parar</button>
+                        </button>    
+                    </div> 
+                     
+                    
+                    
+                    
+                    
+                </div>    
+                
+            </div>
+        </div>
+        <div id="alarm">
+             <button id="clearButton"   >
+                <img src="asstes/Icon2.svg" alt="">
+            </button>
+            <div id="alarm1">
+                <img src="asstes/Emoji2.svg" alt="cup"> 
+                <p class="lembrete">Lembrete para 
+                    beber água!</p>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+
+<!-- comecei dia 30/09/2023, e terminei com 90% porcento acredito eu feito do desafio de quarta feira,
+     foi bem bacana por que tenho aprendido mais quando eu pesquiso a te achar a solucao , 
+     cheguei a ficar desanimado deivido o JS, mais retomei o caminho -->
+
+</body>
+</html>
+                    
+                    
